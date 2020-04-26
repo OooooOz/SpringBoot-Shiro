@@ -17,6 +17,7 @@
         <module>Shiro-Login</module>
         <module>Shiro-RememberMe</module>
         <module>Shiro-EhCache</module>
+        <module>Shiro-Session</module>
     </modules>
 
     <properties>
