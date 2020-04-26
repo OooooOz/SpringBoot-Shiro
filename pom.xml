@@ -19,6 +19,7 @@
         <module>Shiro-EhCache</module>
         <module>Shiro-Session</module>
         <module>Shiro-KickoutSession</module>
+        <module>Shiro-RetryLimit</module>
     </modules>
 
     <properties>
