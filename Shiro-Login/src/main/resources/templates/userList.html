@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>用户列表页面</title>
+	<style type="text/css">
+		table{
+
+			border: 1px solid grey;
+			border-collapse: collapse;
+		}
+		table td{
+			border: 1px solid grey;
+			border-collapse: collapse;
+		}
+	</style>
+</head>
+<body>
+<h2>用户列表页面</h2>
+<p>当前在线人数：${count}</p>
+<table>
+	<caption>
+		<div shiro:hasPermission="function:add"><a href="/toAdd.do">添加</a></div>
+		<div shiro:hasPermission="function:update"><a href="/toUpdate.do">修改</a></div>
+		<div shiro:hasPermission="function:delete"><a href="/toDelete.do">删除</a></div>
+	</caption>
+	<tr>
+		<td>用户ID</td><td>用户名称</td><td>电话</td><td>email</td><td>状态</td><td>创建时间</td><td>备注</td>
+	</tr>
+	<tr th:each="user : ${userList}">
+		<td th:text="${user.userId}"></td>
+		<td th:text="${user.userName}"></td>
+		<td th:text="${user.phone}"></td>
+		<td th:text="${user.email}"></td>
+		<td th:if="${user.status == 1 ?'正常':'异常'}">正常</td>
+		<td th:text="${user.createTime}"></td>
+		<td th:text="${user.note}"></td>
+	</tr>
+</table>
+</body>
+</html>
