@@ -1,0 +1,9 @@
+*.log
+*.iml
+/.idea
+/target/
+/${logs.path}
+.cmd
+.sh
+.json
+/logs
