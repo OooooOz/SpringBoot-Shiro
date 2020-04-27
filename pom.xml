@@ -21,6 +21,7 @@
         <module>Shiro-KickoutSession</module>
         <module>Shiro-RetryLimit</module>
         <module>Shiro-RedisCache</module>
+        <module>Shiro-RedisTemplateCache</module>
     </modules>
 
     <properties>
