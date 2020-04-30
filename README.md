@@ -1,1 +1,1 @@
-Yep!
+SpringBoot继承Shiro的相关功能，包括登陆验证，EHCache缓存、Redis缓存、Session管理、在线人数控制、登陆重试次数控制
